@@ -25,6 +25,17 @@
       :model-value="backupCloud.configuration.password"
       @update:model-value="updateConfiguration($event, 'configuration.password')"
     />
+    <openwb-base-text-input
+      title="Retention (Tage)"
+      subtype="number"
+      :model-value="backupCloud.configuration.retention_days"
+      @update:model-value="updateConfiguration($event, 'configuration.retention_days')"
+    >
+      <template #help>
+        Gibt die Anzahl der Tage an, nach denen alte Backups automatisch gelöscht werden. Wenn nicht gesetzt, werden
+        keine Backups gelöscht.
+      </template>
+    </openwb-base-text-input>
   </div>
 </template>
 
